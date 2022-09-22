@@ -115,23 +115,20 @@
 // }
 //
 
-
 import 'package:hello_world/child.dart';
+import 'package:hello_world/human.dart';
 import 'package:hello_world/oop_axample.dart';
 
 void main(){
-  Parent child1 = Parent.boy("ahmed");
-  Parent child2 = Parent.boy("mohamed");
-  Parent child3 = Parent.girl("sara");
-  Parent child4 = Parent.girl("zeina");
-  Child child = Child("inheritance");
-  child.getChildrenInfo();
-// child3.getChildrenInfo();
-
-
-
-
-
+  Parent p1 = Parent();
+  p1.eat("fish");
+  // Parent child1 = Parent.boy("ahmed");
+  // Parent child2 = Parent.boy("mohamed");
+  // Parent child3 = Parent.girl("sara");
+  // Parent child4 = Parent.girl("zeina");
+  // Child child = Child("inheritance");
+  // child.getChildrenInfo();
+  // child3.getChildrenInfo();
   // Mobile samsungMobile = Mobile();
   // samsungMobile.price = 1200.5;
   // samsungMobile.type= "Samsung";

@@ -1,12 +1,13 @@
 import 'package:hello_world/oop_axample.dart';
+import 'human.dart';
 
-class Child extends Parent{
+class Child extends Parent with Human{
   String address = "";
   Child(String name){
     this.name = name;
-    this.height=120;
-    this.setAge(20);
-    this.address= "mansoura";
+    height=120;
+    setAge(20);
+    address= "mansoura";
    // super.getChildrenInfo();
   }
   printInfo(){

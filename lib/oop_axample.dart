@@ -1,5 +1,8 @@
 
-class Parent{
+import 'package:hello_world/human.dart';
+
+class Parent extends Human{
+
   String name = "this is a default Name";
   String birthDay= "";
   int _age = 0 ;
@@ -43,5 +46,20 @@ class Parent{
     return _age ;
   }
   double getSalary()=>_salary;
+
+  @override
+  void eat(String food) {
+    print("eating...$food");
+  }
+
+  @override
+  void sleep(double hours) {
+    print("sleeping for...$hours hours");
+  }
+
+  @override
+  void walk(int steps) {
+    print("start walking");
+  }
 
 }
