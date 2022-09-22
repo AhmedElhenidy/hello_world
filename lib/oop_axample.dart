@@ -3,19 +3,24 @@ import 'package:hello_world/human.dart';
 
 class Parent extends Human{
 
-  String name = "this is a default Name";
-  String birthDay= "";
-  int _age = 0 ;
-  double height = 0.0;
-  double _salary = 0.0;
-  String _eyeColor = "";
+  String? name ;
+  String? birthDay;
+  int? _age  ;
+  double? height ;
+  double? _salary ;
+  String? _eyeColor;
   static int childrenNumber = 0;
   static int boysNumber = 0 ;
   static int girlsNumber = 0 ;
-  Parent(){
-    childrenNumber++;
-    //print("this is a default constructor");
-  }
+  Parent({ required this.name,this.height,this.birthDay});
+  // Parent(String name,int age){
+  //   this.name = name ;
+  //   this._age= age;
+  // }
+  // Parent(){
+  //   childrenNumber++;
+  //   //print("this is a default constructor");
+  // }
   Parent.boy(String name){
     childrenNumber++;
     boysNumber++;
@@ -43,9 +48,15 @@ class Parent extends Human{
     _age = number ;
   }
   int getAge(){
-    return _age ;
+    // if(_age==null){
+    //   return 0;
+    // }else{
+    //   return _age!;
+    // }
+     return _age==null?0:_age! ;
+    //return _age;
   }
-  double getSalary()=>_salary;
+  double? getSalary()=>_salary;
 
   @override
   void eat(String food) {

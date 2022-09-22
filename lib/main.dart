@@ -120,8 +120,21 @@ import 'package:hello_world/human.dart';
 import 'package:hello_world/oop_axample.dart';
 
 void main(){
-  Parent p1 = Parent();
-  p1.eat("fish");
+
+  Parent p1 = Parent(
+    name: "ahmed",
+    birthDay: "9-11-2002",
+  );
+  printParentInfo(parent: p1);
+  printParentInfo(parent: Parent(
+    name: "moahmed",
+    height: 100
+  ),
+  );
+  printParentInfo();
+ // p1.setAge(20);
+ //  print(p1.name);
+ //  print(p1.birthDay);
   // Parent child1 = Parent.boy("ahmed");
   // Parent child2 = Parent.boy("mohamed");
   // Parent child3 = Parent.girl("sara");
@@ -141,6 +154,10 @@ void main(){
   // appleMobile.price = 20000;
   // appleMobile.os= "iOS";
   // print(appleMobile.os);
+ }
+ void printParentInfo({Parent? parent}){
+    print(parent?.name);
+    print(parent?.birthDay);
  }
  class Mobile{
    String color = "";
